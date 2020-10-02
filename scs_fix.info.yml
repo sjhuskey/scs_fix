@@ -1,0 +1,6 @@
+name: SCS Fix Module
+description: Fixes "non-existent config entity name returned by FieldStorageConfigInterface::getBundles()" error
+package: Custom
+type: module
+version: 1.0
+core: 8.x

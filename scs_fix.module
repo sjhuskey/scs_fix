@@ -1,0 +1,701 @@
+function scs_fix_update_8901() {
+$entity_type = 'Type';
+$bundle = 'Bundle';
+$field_name = 'Field';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8902() {
+$entity_type = 'comment';
+$bundle = 'comment_node_time_slot_institution';
+$field_name = 'comment_body';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8903() {
+$entity_type = 'comment';
+$bundle = 'comment_node_annual_meeting_abstract';
+$field_name = 'comment_body';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8904() {
+$entity_type = 'comment';
+$bundle = 'comment_node_apa_blog';
+$field_name = 'comment_body';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8905() {
+$entity_type = 'node';
+$bundle = 'forum';
+$field_name = 'comment_forum';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8906() {
+$entity_type = 'node';
+$bundle = 'ad_push';
+$field_name = 'comment_node_ad_push';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8907() {
+$entity_type = 'node';
+$bundle = 'amphora';
+$field_name = 'comment_node_amphora';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8908() {
+$entity_type = 'node';
+$bundle = 'contact_form';
+$field_name = 'comment_node_contact_form';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8909() {
+$entity_type = 'node';
+$bundle = 'image_gallery';
+$field_name = 'comment_node_image_gallery';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8910() {
+$entity_type = 'node';
+$bundle = 'interview_candidate';
+$field_name = 'comment_node_interview_candidate';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8911() {
+$entity_type = 'node';
+$bundle = 'interview_room';
+$field_name = 'comment_node_interview_room';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8912() {
+$entity_type = 'node';
+$bundle = 'member_spotlight';
+$field_name = 'comment_node_member_spotlight';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8913() {
+$entity_type = 'node';
+$bundle = 'placement';
+$field_name = 'comment_node_placement';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8914() {
+$entity_type = 'node';
+$bundle = 'product_display';
+$field_name = 'comment_node_product_display';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8915() {
+$entity_type = 'node';
+$bundle = 'recurring_product';
+$field_name = 'comment_node_recurring_product';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8916() {
+$entity_type = 'node';
+$bundle = 'resources';
+$field_name = 'comment_node_resources';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8917() {
+$entity_type = 'node';
+$bundle = 'tapa_content';
+$field_name = 'comment_node_tapa_content';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8918() {
+$entity_type = 'node';
+$bundle = 'time_slot_candidate';
+$field_name = 'comment_node_time_slot_candidate';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8919() {
+$entity_type = 'node';
+$bundle = 'vp_report';
+$field_name = 'comment_node_vp_report';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8920() {
+$entity_type = 'node';
+$bundle = 'image_gallery';
+$field_name = 'field_annual_meeting';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8921() {
+$entity_type = 'node';
+$bundle = 'image_gallery';
+$field_name = 'field_apa_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8922() {
+$entity_type = 'node';
+$bundle = 'tapa_content';
+$field_name = 'field_apa_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8923() {
+$entity_type = 'node';
+$bundle = 'vp_report';
+$field_name = 'field_apa_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8924() {
+$entity_type = 'node';
+$bundle = 'amphora';
+$field_name = 'field_blog_header_image';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8925() {
+$entity_type = 'node';
+$bundle = 'resources';
+$field_name = 'field_blog_section_header_title';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8926() {
+$entity_type = 'node';
+$bundle = 'amphora';
+$field_name = 'field_blog_tags';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8927() {
+$entity_type = 'node';
+$bundle = 'resources';
+$field_name = 'field_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8928() {
+$entity_type = 'node';
+$bundle = 'amphora';
+$field_name = 'field_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8929() {
+$entity_type = 'node';
+$bundle = 'time_slot_institution';
+$field_name = 'field_comment';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8930() {
+$entity_type = 'node';
+$bundle = 'interview_candidate';
+$field_name = 'field_current_institution';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8931() {
+$entity_type = 'node';
+$bundle = 'time_slot_candidate';
+$field_name = 'field_date_and_time';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8932() {
+$entity_type = 'node';
+$bundle = 'time_slot_institution';
+$field_name = 'field_date_and_time';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8933() {
+$entity_type = 'node';
+$bundle = 'vp_report';
+$field_name = 'field_division';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8934() {
+$entity_type = 'node';
+$bundle = 'interview_candidate';
+$field_name = 'field_first_name';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8935() {
+$entity_type = 'node';
+$bundle = 'contact_form';
+$field_name = 'field_first_name';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8936() {
+$entity_type = 'node';
+$bundle = 'ad_push';
+$field_name = 'field_image';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8937() {
+$entity_type = 'node';
+$bundle = 'image_gallery';
+$field_name = 'field_images';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8938() {
+$entity_type = 'node';
+$bundle = 'interview_candidate';
+$field_name = 'field_job_ad';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8939() {
+$entity_type = 'node';
+$bundle = 'interview_candidate';
+$field_name = 'field_last_name';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8940() {
+$entity_type = 'node';
+$bundle = 'contact_form';
+$field_name = 'field_last_name';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8941() {
+$entity_type = 'node';
+$bundle = 'ad_push';
+$field_name = 'field_link';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8942() {
+$entity_type = 'node';
+$bundle = 'interview_candidate';
+$field_name = 'field_middle_initial';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8943() {
+$entity_type = 'node';
+$bundle = 'time_slot_institution';
+$field_name = 'field_override_conflict';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8944() {
+$entity_type = 'node';
+$bundle = 'placement';
+$field_name = 'field_placement_year';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8945() {
+$entity_type = 'node';
+$bundle = 'product_display';
+$field_name = 'field_product_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8946() {
+$entity_type = 'node';
+$bundle = 'recurring_product';
+$field_name = 'field_product_category';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8947() {
+$entity_type = 'node';
+$bundle = 'time_slot_institution';
+$field_name = 'field_room';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8948() {
+$entity_type = 'node';
+$bundle = 'member_spotlight';
+$field_name = 'field_spotlight_image';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8949() {
+$entity_type = 'node';
+$bundle = 'ad_push';
+$field_name = 'field_tagline';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8950() {
+$entity_type = 'node';
+$bundle = 'tapa_content';
+$field_name = 'field_volume';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8951() {
+$entity_type = 'node';
+$bundle = 'placement';
+$field_name = 'field_year';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8952() {
+$entity_type = 'node';
+$bundle = 'vp_report';
+$field_name = 'field_year';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8953() {
+$entity_type = 'node';
+$bundle = 'forum';
+$field_name = 'taxonomy_forums';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
+
+function scs_fix_update_8954() {
+$entity_type = 'taxonomy_term';
+$bundle = 'blog_category';
+$field_name = 'field_tile_title';
+/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  // Remove the field_dates field from the bundle field map for the page bundle.
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
