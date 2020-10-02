@@ -1,3 +1,4 @@
+<?php
 function scs_fix_update_8901() {
 $entity_type = 'Type';
 $bundle = 'Bundle';
