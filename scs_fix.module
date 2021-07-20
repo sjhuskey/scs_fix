@@ -1,6 +1,6 @@
 <?php
 
-function my_module_update_8002() {
+function scs_fix_update_8002() {
 
   $problem_fields = array (
     array("node","forum","comment_forum"), 
@@ -54,11 +54,11 @@ function my_module_update_8002() {
     array("node","forum","taxonomy_forums")
   );
 
-  foreach($problem_fields as $value)
+  foreach($problem_fields as $arr){
 
-    $entity_type = "'" . $value[0] . "'";
-    $bundle = "'" .  $value[1] . "'";
-    $field_name = "'" . $value[2] . "'";
+    $entity_type = "'" . $arr[0] . "'";
+    $bundle = "'" .  $arr[1] . "'";
+    $field_name = "'" . $arr[2] . "'";
 
     /** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
     $key_value_factory = \Drupal::service('keyvalue');
@@ -71,5 +71,5 @@ function my_module_update_8002() {
     unset($map[$field_name]['bundles'][$bundle]);
 
     $field_map_kv_store->set($entity_type, $map);
-
+  }
 }
