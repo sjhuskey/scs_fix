@@ -1,14 +1,75 @@
 <?php
 
-function scs_fix_update_8901() {
-$entity_type = 'comment';
-$bundle = 'comment_node_time_slot_institution';
-$field_name = 'comment_body';
-/** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
-  $key_value_factory = \Drupal::service('keyvalue');
-  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
-  $map = $field_map_kv_store->get($entity_type);
-  // Remove the field_dates field from the bundle field map for the page bundle.
-  unset($map[$field_name]['bundles'][$bundle]);
-  $field_map_kv_store->set($entity_type, $map);
+function my_module_update_8002() {
+
+  $problem_fields = array (
+    array("node","forum","comment_forum"), 
+    array("node","ad_push","comment_node_ad_push"), 
+    array("node","amphora","comment_node_amphora"), 
+    array("node","contact_form","comment_node_contact_form"), 
+    array("node","image_gallery","comment_node_image_gallery"), 
+    array("node","interview_candidate","comment_node_interview_candidate"), 
+    array("node","interview_room","comment_node_interview_room"), 
+    array("node","member_spotlight","comment_node_member_spotlight"), 
+    array("node","placement","comment_node_placement"), 
+    array("node","product_display","comment_node_product_display"), 
+    array("node","recurring_product","comment_node_recurring_product"), 
+    array("node","resources","comment_node_resources"), 
+    array("node","tapa_content","comment_node_tapa_content"), 
+    array("node","time_slot_candidate","comment_node_time_slot_candidate"), 
+    array("node","vp_report","comment_node_vp_report"), 
+    array("node","image_gallery","field_annual_meeting"), 
+    array("node","image_gallery","field_apa_category"), 
+    array("node","tapa_content","field_apa_category"), 
+    array("node","vp_report","field_apa_category"), 
+    array("node","amphora","field_blog_header_image"), 
+    array("node","resources","field_blog_section_header_title"), 
+    array("node","amphora","field_blog_tags"), 
+    array("node","resources","field_category"), 
+    array("node","amphora","field_category"), 
+    array("node","time_slot_institution","field_comment"), 
+    array("node","interview_candidate","field_current_institution"), 
+    array("node","time_slot_candidate","field_date_and_time"), 
+    array("node","time_slot_institution","field_date_and_time"), 
+    array("node","vp_report","field_division"), 
+    array("node","interview_candidate","field_first_name"), 
+    array("node","contact_form","field_first_name"), 
+    array("node","ad_push","field_image"), 
+    array("node","image_gallery","field_images"), 
+    array("node","interview_candidate","field_job_ad"), 
+    array("node","interview_candidate","field_last_name"), 
+    array("node","contact_form","field_last_name"), 
+    array("node","ad_push","field_link"), 
+    array("node","interview_candidate","field_middle_initial"), 
+    array("node","time_slot_institution","field_override_conflict"), 
+    array("node","placement","field_placement_year"), 
+    array("node","product_display","field_product_category"), 
+    array("node","recurring_product","field_product_category"), 
+    array("node","time_slot_institution","field_room"), 
+    array("node","member_spotlight","field_spotlight_image"), 
+    array("node","ad_push","field_tagline"), 
+    array("node","tapa_content","field_volume"), 
+    array("node","placement","field_year"), 
+    array("node","vp_report","field_year"), 
+    array("node","forum","taxonomy_forums")
+  );
+
+  foreach($problem_fields as $value)
+
+    $entity_type = "'" . $value[0] . "'";
+    $bundle = "'" .  $value[1] . "'";
+    $field_name = "'" . $value[2] . "'";
+
+    /** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+    $key_value_factory = \Drupal::service('keyvalue');
+
+    $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+
+    $map = $field_map_kv_store->get($entity_type);
+
+    // Remove the field_fpimage field from the bundle gallery_assist for the page bundle.
+    unset($map[$field_name]['bundles'][$bundle]);
+
+    $field_map_kv_store->set($entity_type, $map);
+
 }
